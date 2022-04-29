@@ -66,7 +66,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -75,7 +74,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
@@ -335,6 +333,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminKreiranjeKupca";
             this.Text = "AdminKreiranjeKupca";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminKreiranjeKupca_FormClosed);
             this.Load += new System.EventHandler(this.AdminKreiranjeKupca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

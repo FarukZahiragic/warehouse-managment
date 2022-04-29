@@ -25,17 +25,8 @@ namespace ProjektniZadatak
                 String query = "SELECT kupac_id AS 'ID zaposlenika', ime AS 'Ime'," +
                     " prezime AS 'Prezime', grad AS 'Grad', adresa AS 'Adresa', " +
                     " telefon AS 'telefonski broj', user AS 'Korisnicko ime', pass AS 'Lozinka' " +
-                    " FROM kupac ";
-
-
-                if (textBox1.Text != "")
-                {
-                    query += "WHERE kupac.ime LIKE '" + textBox1.Text + "%' ";
-                }
-                if (textBox2.Text != "" && textBox1.Text=="")
-                {
-                    query += "WHERE kupac.prezime LIKE '" + textBox2.Text + "%' ";
-                }
+                    " FROM kupac " +
+                    " WHERE kupac.ime LIKE'" + textBox1.Text + "%' and kupac.prezime LIKE '" + textBox2.Text + "%' ";
 
 
                 query += " ORDER BY kupac_id ASC ";
@@ -111,15 +102,6 @@ namespace ProjektniZadatak
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            PrikazKupaca();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            PrikazKupaca();
-        }
 
         private void BrisanjeTextBox() {
             textBox3.Text = "";
@@ -227,6 +209,11 @@ namespace ProjektniZadatak
 
             AdminDodavanjeArtikala adminartikal = new AdminDodavanjeArtikala();
             adminartikal.Show();
+        }
+
+        private void AdminKreiranjeKupca_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
 

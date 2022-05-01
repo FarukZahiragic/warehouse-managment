@@ -24,7 +24,7 @@ namespace ProjektniZadatak
             {
                 String query = "SELECT kupac_id AS 'ID zaposlenika', ime AS 'Ime'," +
                     " prezime AS 'Prezime', grad AS 'Grad', adresa AS 'Adresa', " +
-                    " telefon AS 'telefonski broj', user AS 'Korisnicko ime', pass AS 'Lozinka' " +
+                    " telefon AS 'Telefonski broj', user AS 'Korisnicko ime', pass AS 'Lozinka' " +
                     " FROM kupac ";
 
 

@@ -30,7 +30,7 @@ namespace ProjektniZadatak
 
             try
             {
-                String query = "SELECT narudzbenica.narudzbenica_id, artikal.artikal_id,naziv_artikla, kolicina, ime, prezime, datum_narudzbe " +
+                String query = "SELECT narudzbenica.narudzbenica_id as'ID', artikal.artikal_id as 'ID artikla',naziv_artikla as 'Naziv',vrsta_artikla as 'Vrsta', cijena as 'Cijena', kolicina as 'Kolicina', ime as 'Ime', prezime as 'Prezime', datum_narudzbe as 'Datum narudzbe' " +
 " FROM narudzbenica, stavka_narudzbenice, kupac, artikal "+
 " WHERE narudzbenica.narudzbenica_id=stavka_narudzbenice.narudzbenica_id AND "+
 " stavka_narudzbenice.artikal_id= artikal.artikal_id AND "+
@@ -102,7 +102,7 @@ namespace ProjektniZadatak
                 for (i = 0; i < dataGridView1.Rows.Count; ++i)
                 {
                     a = Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value);
-                    b = Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value);
+                    b = Convert.ToInt32(dataGridView1.Rows[i].Cells[5].Value);
                     String upit2 = "UPDATE skladiste SET kolicina_stanje=kolicina_stanje+ '" +b  + "' WHERE artikal_id='" + a + "'";
                     MySqlCommand cmd2 = new MySqlCommand(upit2, konekcija);
                     cmd2.ExecuteNonQuery();

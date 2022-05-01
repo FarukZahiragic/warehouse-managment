@@ -25,8 +25,17 @@ namespace ProjektniZadatak
                 String query = "SELECT kupac_id AS 'ID zaposlenika', ime AS 'Ime'," +
                     " prezime AS 'Prezime', grad AS 'Grad', adresa AS 'Adresa', " +
                     " telefon AS 'telefonski broj', user AS 'Korisnicko ime', pass AS 'Lozinka' " +
-                    " FROM kupac " +
-                    " WHERE kupac.ime LIKE'" + textBox1.Text + "%' and kupac.prezime LIKE '" + textBox2.Text + "%' ";
+                    " FROM kupac ";
+
+
+                if (textBox1.Text != "")
+                {
+                    query += "WHERE kupac.ime LIKE '" + textBox1.Text + "%' ";
+                }
+                if (textBox2.Text != "" && textBox1.Text=="")
+                {
+                    query += "WHERE kupac.prezime LIKE '" + textBox2.Text + "%' ";
+                }
 
 
                 query += " ORDER BY kupac_id ASC ";
@@ -102,6 +111,15 @@ namespace ProjektniZadatak
             }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            PrikazKupaca();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            PrikazKupaca();
+        }
 
         private void BrisanjeTextBox() {
             textBox3.Text = "";
@@ -124,10 +142,11 @@ namespace ProjektniZadatak
                 MySqlCommand cmd = new MySqlCommand(query, konekcija);
                 MySqlDataReader reader;
                 reader = cmd.ExecuteReader();
-                int a = 0;
+                int a = 0, b=0;
+                b= Convert.ToInt32(textBox10.Text);
                 while (reader.Read())
                 {
-                    if (textBox8.Text == reader[0].ToString())
+                    if (textBox8.Text == reader[0].ToString() && textBox8.Text!=dataGridView1.Rows[b-1].Cells[6].Value.ToString())
                     {
                         MessageBox.Show("Neko vec posjeduje ovo korisnicko ime");
                         a = 1;
@@ -209,6 +228,14 @@ namespace ProjektniZadatak
 
             AdminDodavanjeArtikala adminartikal = new AdminDodavanjeArtikala();
             adminartikal.Show();
+        }
+
+        private void prikazBrisanjeNarudzbeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            PrikazBrisanjeNarudzbe fr2 = new PrikazBrisanjeNarudzbe();
+            fr2.Show();
         }
 
         private void AdminKreiranjeKupca_FormClosed(object sender, FormClosedEventArgs e)

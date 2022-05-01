@@ -17,9 +17,6 @@ namespace ProjektniZadatak
             InitializeComponent();
         }
 
-        public static String konekStr = "Server=localhost; Port=3306; " +
-    "Database=baza_ppj; Uid=root; Pwd=";
-
         private void AdminDodavanjeArtikala_Load(object sender, EventArgs e)
         {
             PrikazArtikala();
@@ -45,7 +42,7 @@ namespace ProjektniZadatak
 
                 query += " ORDER BY artikal.artikal_id ASC ";
 
-                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                MySqlConnection konekcija = new MySqlConnection(AdminKreiranjeKupca.konekStr);
 
                 konekcija.Open();
 
@@ -87,7 +84,7 @@ namespace ProjektniZadatak
             {
 
                 String query = "SELECT naziv_artikla FROM artikal ";
-                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                MySqlConnection konekcija = new MySqlConnection(AdminKreiranjeKupca.konekStr);
                 konekcija.Open();
                 MySqlCommand cmd = new MySqlCommand(query, konekcija);
                 MySqlDataReader reader;
@@ -152,7 +149,7 @@ namespace ProjektniZadatak
 " WHERE artikal.artikal_id=skladiste.artikal_id AND "+
 " artikal.artikal_id= '"+textBox7.Text+"'";
 
-                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                MySqlConnection konekcija = new MySqlConnection(AdminKreiranjeKupca.konekStr);
                 konekcija.Open();
 
                 MySqlCommand cmd = new MySqlCommand(upit, konekcija);
@@ -185,7 +182,7 @@ namespace ProjektniZadatak
         {
             try
             {
-                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                MySqlConnection konekcija = new MySqlConnection(AdminKreiranjeKupca.konekStr);
                 konekcija.Open();
 
                     String upit = "UPDATE skladiste "+
@@ -220,6 +217,14 @@ namespace ProjektniZadatak
         private void AdminDodavanjeArtikala_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void prikazBrisanjeNarudzbeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            PrikazBrisanjeNarudzbe fr2 = new PrikazBrisanjeNarudzbe();
+            fr2.Show();
         }
 
     }

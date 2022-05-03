@@ -1,0 +1,13 @@
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\bin\Release\ProjektniZadatak.exe
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\bin\Release\ProjektniZadatak.pdb
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\bin\Release\MySql.Data.dll
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.AdminDodavanjeArtikala.resources
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.AdminKreiranjeKupca.resources
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\WindowsFormsApplication1.KupacKreiranjeNarudzbe.resources
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.KupacPrikazNarudzbi.resources
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.LoginForma.resources
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.PrikazBrisanjeNarudzbe.resources
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.Properties.Resources.resources
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.csproj.GenerateResource.Cache
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.exe
+C:\Users\Faruk\Desktop\Programi\ProjektniZadatak-main\ProjektniZadatak\ProjektniZadatak\obj\x86\Release\ProjektniZadatak.pdb

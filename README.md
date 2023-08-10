@@ -1,2 +1,2 @@
-# ProjektniZadatak
-Projektni zadatak -Windows Form aplikacija
+# WarehouseManagment
+Warehouse managment app made using Windows Form Application
